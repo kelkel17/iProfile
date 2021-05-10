@@ -11,7 +11,7 @@ import Firebase
 @main
 struct iProfileApp: App {
     @AppStorage("log_status") var status = false
-    @StateObject var model = AuthModel()
+    @ObservedObject var model = AuthModel()
     @UIApplicationDelegateAdaptor(Delegate.self) var delegate
     
     var body: some Scene {
@@ -19,7 +19,19 @@ struct iProfileApp: App {
             if status {
                 ContentView()
             } else {
-                LoginView(model: model)
+                if model.isSignUp {
+                    RegisterView(model: model)
+                        .customBackground()
+                        .alert(isPresented: $model.alert, content: {
+                            Alert(title: Text("Message"), message: Text(model.alertMessage), dismissButton: .destructive(Text("OK")))
+                        })
+                } else {
+                    LoginView(model: model)
+                        .customBackground()
+                        .alert(isPresented: $model.alert, content: {
+                            Alert(title: Text("Message"), message: Text(model.alertMessage), dismissButton: .destructive(Text("OK")))
+                        })
+                }
             }
         }
     }

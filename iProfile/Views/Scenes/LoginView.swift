@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var model = AuthModel()
+    @ObservedObject var model = AuthModel()
     
     var body: some View {
         VStack {
@@ -29,21 +29,23 @@ struct LoginView: View {
                     .background(Color.black)
                     .clipShape(Capsule())
             })
+            
+            HStack(spacing: 12) {
+                Text("Don't have an account yet?")
+                    .foregroundColor(Color.white.opacity(0.7))
+                
+                Button(action: { model.isSignUp.toggle() }, label: {
+                    Text("Sign Up Now")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                })
+            }
         }
-        .background(
-            Image(uiImage: #imageLiteral(resourceName: "loginBackgroundJ"))
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        )
-        .alert(isPresented: $model.alert, content: {
-            Alert(title: Text("Message"), message: Text(model.alertMessage), dismissButton: .destructive(Text("OK")))
-        })
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(model: AuthModel())
     }
 }
