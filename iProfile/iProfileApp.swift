@@ -19,7 +19,29 @@ struct iProfileApp: App {
             if status {
                 ContentView()
             } else {
-                LoginView(model: model)
+                if model.isSignUp {
+                    RegisterView(model: model)
+                        .background(
+                            Image(uiImage: #imageLiteral(resourceName: "loginBackgroundJ"))
+                                .resizable()
+                                .edgesIgnoringSafeArea(.all)
+                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        )
+                        .alert(isPresented: $model.alert, content: {
+                            Alert(title: Text("Message"), message: Text(model.alertMessage), dismissButton: .destructive(Text("OK")))
+                        })
+                } else {
+                    LoginView(model: model)
+                        .background(
+                            Image(uiImage: #imageLiteral(resourceName: "loginBackgroundJ"))
+                                .resizable()
+                                .edgesIgnoringSafeArea(.all)
+                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        )
+                        .alert(isPresented: $model.alert, content: {
+                            Alert(title: Text("Message"), message: Text(model.alertMessage), dismissButton: .destructive(Text("OK")))
+                        })
+                }
             }
         }
     }
