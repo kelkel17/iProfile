@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
+    @State var model = AuthModel()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 25) {
+            Text("Logged in as \(Auth.auth().currentUser?.email ?? "")")
+            
+            Button(action: model.logout, label: {
+                Text("Logout")
+            })
+        }
     }
 }
 

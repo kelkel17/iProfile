@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		24C5F0EE2648DAFB00D2BAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C5F0ED2648DAFB00D2BAB3 /* Assets.xcassets */; };
 		24C5F0F12648DAFB00D2BAB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C5F0F02648DAFB00D2BAB3 /* Preview Assets.xcassets */; };
 		24C5F0F92648DC9300D2BAB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24C5F0F82648DC9300D2BAB3 /* GoogleService-Info.plist */; };
+		24C5F0FD2648FD0000D2BAB3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F0FC2648FD0000D2BAB3 /* LoginView.swift */; };
+		24C5F0FF2648FD2800D2BAB3 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F0FE2648FD2800D2BAB3 /* AuthModel.swift */; };
+		24C5F1022648FD6A00D2BAB3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F1012648FD6A00D2BAB3 /* CustomTextField.swift */; };
 		ED19B9B62B7D7E0A4C934307 /* Pods_iProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883333BDE6758BEED248744B /* Pods_iProfile.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		24C5F0F02648DAFB00D2BAB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24C5F0F22648DAFB00D2BAB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C5F0F82648DC9300D2BAB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24C5F0FC2648FD0000D2BAB3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		24C5F0FE2648FD2800D2BAB3 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		24C5F1012648FD6A00D2BAB3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		3AEB48CBCD3B0BC64778964D /* Pods-iProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProfile.release.xcconfig"; path = "Target Support Files/Pods-iProfile/Pods-iProfile.release.xcconfig"; sourceTree = "<group>"; };
 		6591FA7EC5F45EF9A765398E /* Pods-iProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProfile.debug.xcconfig"; path = "Target Support Files/Pods-iProfile/Pods-iProfile.debug.xcconfig"; sourceTree = "<group>"; };
 		883333BDE6758BEED248744B /* Pods_iProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +52,6 @@
 				6591FA7EC5F45EF9A765398E /* Pods-iProfile.debug.xcconfig */,
 				3AEB48CBCD3B0BC64778964D /* Pods-iProfile.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,8 +76,9 @@
 		24C5F0E82648DAF800D2BAB3 /* iProfile */ = {
 			isa = PBXGroup;
 			children = (
+				24C5F0FB2648FCEA00D2BAB3 /* Views */,
+				24C5F0FA2648FCE400D2BAB3 /* Model */,
 				24C5F0E92648DAF800D2BAB3 /* iProfileApp.swift */,
-				24C5F0EB2648DAF800D2BAB3 /* ContentView.swift */,
 				24C5F0ED2648DAFB00D2BAB3 /* Assets.xcassets */,
 				24C5F0F22648DAFB00D2BAB3 /* Info.plist */,
 				24C5F0F82648DC9300D2BAB3 /* GoogleService-Info.plist */,
@@ -87,6 +93,40 @@
 				24C5F0F02648DAFB00D2BAB3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		24C5F0FA2648FCE400D2BAB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24C5F0FE2648FD2800D2BAB3 /* AuthModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24C5F0FB2648FCEA00D2BAB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24C5F1032648FD8900D2BAB3 /* Scenes */,
+				24C5F1002648FD5300D2BAB3 /* Custom */,
+				24C5F0EB2648DAF800D2BAB3 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24C5F1002648FD5300D2BAB3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				24C5F1012648FD6A00D2BAB3 /* CustomTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		24C5F1032648FD8900D2BAB3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				24C5F0FC2648FD0000D2BAB3 /* LoginView.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		77D4923C4A80C71B3D7B65AB /* Frameworks */ = {
@@ -211,8 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C5F0FD2648FD0000D2BAB3 /* LoginView.swift in Sources */,
+				24C5F0FF2648FD2800D2BAB3 /* AuthModel.swift in Sources */,
 				24C5F0EC2648DAF800D2BAB3 /* ContentView.swift in Sources */,
 				24C5F0EA2648DAF800D2BAB3 /* iProfileApp.swift in Sources */,
+				24C5F1022648FD6A00D2BAB3 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
