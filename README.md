@@ -1,1 +1,4 @@
-
+## Run
+```
+pod install
+```
