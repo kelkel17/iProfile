@@ -8,6 +8,7 @@ target 'iProfile' do
   # Pods for iProfile
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 end
 
 post_install do |installer|

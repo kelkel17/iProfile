@@ -17,4 +17,11 @@ extension View {
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             )
     }
+    
+    func roundImage() -> some View {
+        self
+            .frame(width: 150, height: 150, alignment: .center)
+            .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+            .clipShape(Circle())
+    }
 }

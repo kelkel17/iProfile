@@ -17,6 +17,8 @@
 		24C5F1022648FD6A00D2BAB3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F1012648FD6A00D2BAB3 /* CustomTextField.swift */; };
 		24C5F10526491FB900D2BAB3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F10426491FB900D2BAB3 /* RegisterView.swift */; };
 		24C5F107264929F800D2BAB3 /* Background+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F106264929F800D2BAB3 /* Background+Extension.swift */; };
+		24C5F1092649380100D2BAB3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F1082649380100D2BAB3 /* ImagePicker.swift */; };
+		24C5F10B26493B0900D2BAB3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F10A26493B0900D2BAB3 /* UserModel.swift */; };
 		ED19B9B62B7D7E0A4C934307 /* Pods_iProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883333BDE6758BEED248744B /* Pods_iProfile.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		24C5F1012648FD6A00D2BAB3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		24C5F10426491FB900D2BAB3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		24C5F106264929F800D2BAB3 /* Background+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Background+Extension.swift"; sourceTree = "<group>"; };
+		24C5F1082649380100D2BAB3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		24C5F10A26493B0900D2BAB3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3AEB48CBCD3B0BC64778964D /* Pods-iProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProfile.release.xcconfig"; path = "Target Support Files/Pods-iProfile/Pods-iProfile.release.xcconfig"; sourceTree = "<group>"; };
 		6591FA7EC5F45EF9A765398E /* Pods-iProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProfile.debug.xcconfig"; path = "Target Support Files/Pods-iProfile/Pods-iProfile.debug.xcconfig"; sourceTree = "<group>"; };
 		883333BDE6758BEED248744B /* Pods_iProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				24C5F0FE2648FD2800D2BAB3 /* AuthModel.swift */,
+				24C5F10A26493B0900D2BAB3 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			children = (
 				24C5F1012648FD6A00D2BAB3 /* CustomTextField.swift */,
 				24C5F106264929F800D2BAB3 /* Background+Extension.swift */,
+				24C5F1082649380100D2BAB3 /* ImagePicker.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 				24C5F107264929F800D2BAB3 /* Background+Extension.swift in Sources */,
 				24C5F0EC2648DAF800D2BAB3 /* ContentView.swift in Sources */,
 				24C5F10526491FB900D2BAB3 /* RegisterView.swift in Sources */,
+				24C5F1092649380100D2BAB3 /* ImagePicker.swift in Sources */,
 				24C5F0EA2648DAF800D2BAB3 /* iProfileApp.swift in Sources */,
+				24C5F10B26493B0900D2BAB3 /* UserModel.swift in Sources */,
 				24C5F1022648FD6A00D2BAB3 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
